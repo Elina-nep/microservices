@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microservices</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+  <header class="header">
+    <div class="header__logo"><img src="./assets/docker-logo.svg" alt="docker-logo"></div>
+  </header>
+  <main class="wrapper">
+    <h1 class="title">ABOUT MICROSERVICES AND DOCKER</h1>
+    <section class="section">
+      <h2 class="section__title">Content</h2>
+      <ol>
+        <li> <a href="#Monolithic">Monolithic applications</a></li>
+        <li> <a href="#Microservices">Microservices</a></li>
+        <li> <a href="#Moving">Moving to microservices</a></li>
+        <li> <a href="#Docker">Docker</a></li>
+      </ol>
+    </section>
+    <section class="section">
+      <h2 class="section__title">
+        <a name="Monolithic"></a>Monolithic applications
+      </h2>
+      <div class="section__columns">
+        <div>
+          <p>The <a href="https://www.n-ix.com/microservices-vs-monolith-which-architecture-best-choice-your-business/#:~:text=The%20monolithic%20architecture%20is%20considered,%2Dapplication%2C%20and%20a%20database.">monolithic architecture</a> is considered
+            to be a traditional way of building applications. A monolithic application is built as a single unit. Usually, such a solution comprises a client-side user interface, a server side-application, and a database. It is unified and all the functions
+            are managed and served in one place.</p>
+          <p>If developers want to update or change something, they access the same code base. So, they make changes in the whole stack at once.
+          </p>
+        </div>
+        <figure class="section__img">
+          <img src="./assets/monolit.svg" alt="monolitic app"></figure>
+      </div>
+
+      <div class="section__subsection">
+
+        <figure class="section__adv"><img src="./assets/plus.svg" alt="+"></figure>
+        <ol>
+          <li><b>Less cross-cutting concerns.</b> In a monolithic application, functionality concerns only one application so it is easier to handle it.
+          </li>
+          <li> <b>Easier debugging and testing.</b> Monolithic applications are much easier to debug and test.
+          </li>
+          <li> <b>Simple to deploy.</b> When it comes to monolithic applications, you do not have to handle many deployments – just one file or directory.
+          </li>
+          <li> <b>Simple to develop.</b> As long as the monolithic approach is a standard way of building applications, any engineering team has the right knowledge and capabilities to develop a monolithic application.</li>
+        </ol>
+
+      </div>
+      <h3>When we still use it? </h3>
+      <p> When you have small application. Just simplify.</p>
+
+
+      <div class="section__subsection">
+
+        <figure class="section__adv"><img src="./assets/minus.svg" alt="-"></figure>
+        <ol>
+          <li><b>Understanding.</b> When a monolithic application scales up, it becomes too complicated to understand. Also, a complex system of code within one application is hard to manage.
+          </li>
+          <li> <b>Making changes.</b> It is harder to implement changes in such a large and complex application with highly tight coupling. Any code change affects the whole system so it has to be thoroughly coordinated. This makes the overall development
+            process much longer.
+          </li>
+          <li> <b>Scalability. </b> You cannot scale components independently, only the whole application.
+          </li>
+          <li> <b>New technology barriers.</b> It is extremely problematic to apply a new technology in a monolithic application because then the entire application has to be rewritten.
+          </li>
+        </ol>
+      </div>
+      <h3>And when not... </h3>
+      <p> For evolutive applications with number of different functions.</p>
+
+    </section>
+    <section class="section">
+      <h2 class="section__title">
+        <a name="Microservices"></a>Microservices</h2>
+      <p><a href="https://www.n-ix.com/microservices-vs-monolith-which-architecture-best-choice-your-business/#:~:text=The%20monolithic%20architecture%20is%20considered,%2Dapplication%2C%20and%20a%20database.">Microservices architecture</a> breaks into a
+        collection of smaller independent units. These units carry out every application process as a separate service. So all the services have their own logic and the database to perform the specific functions.</p>
+      <p> Within a microservices architecture, the entire functionality is split up into independently deployable modules which communicate with each other through defined methods. Each service covers its own scope and can be updated, deployed, and scaled
+        independently.
+      </p>
+      <figure class="section__illustration"> <img src="./assets/micro.svg" alt="microservices architecture"></figure>
+
+      <div class="section__subsection">
+
+        <figure class="section__adv"><img src="./assets/plus.svg" alt="+"></figure>
+        <ol>
+          <li><b>Independent components.</b> Firstly, all the services can be deployed and updated independently, which gives more flexibility.
+          </li>
+          <li><b>Easier understanding.</b> Split up into smaller and simpler components, a microservice application is easier to understand and manage. You just concentrate on a specific service that is related to a business goal you have.
+          </li>
+          <li><b>Better scalability.</b> The entire process is more cost- and time-effective than with monoliths when the whole application has to be scaled even if there is no need in it. In addition, every monolith has limits in terms of scalability, so
+            the more users you acquire, the more problems you have with your monolith. </li>
+          <li><b>Flexibility in choosing the technology.</b> The engineering teams are not limited by the technology chosen from the start. They are free to apply various technologies and frameworks for each microservice.
+          </li>
+          <li><b>The higher level of agility.</b> Any fault in a microservices application affects only a particular service and not the whole solution.
+          </li>
+        </ol>
+      </div>
+      <h3>When you need it</h3>
+      <p> If you have a complex and scalable application.</p>
+
+      <div class="section__subsection">
+
+        <figure class="section__adv"><img src="./assets/minus.svg" alt="-"></figure>
+        <ol>
+          <li><b>Extra complexity.</b> Since a microservices architecture is a distributed system, you have to choose and set up the connections between all the modules and databases. Also, as long as such an application includes independent services, all
+            of them have to be deployed independently.
+          </li>
+          <li> <b>System distribution.</b> A microservices architecture is a complex system of multiple modules and databases so all the connections have to be handled carefully.
+          </li>
+          <li> <b>Cross-cutting concerns.</b> When creating a microservices application, you will have to deal with a number of cross-cutting concerns. They include externalized configuration, logging, metrics, health checks, and others.
+          </li>
+          <li><b>Testing.</b> A multitude of independently deployable components makes testing a microservices-based solution much harder.
+          </li>
+        </ol>
+      </div>
+
+      <h3>But remember about problems</h3>
+      <p> Without proper skills and knowledge, building a microservice application is extremely risky</p>
+      <p>The microservices architecture is more beneficial for complex and evolving applications.</p>
+    </section>
+    <section class="section">
+      <h2 class="section__title">
+        <a name="Moving"></a>Moving to microservices</h2>
+      <ol>
+        <li>Cultivate a solid foundation. Everything starts with people, so make sure yours are ready to live and breathe in a microservices world.</li>
+        <li> Begin with the API. Simple math: one microservice starts with one API.</li>
+        <li>Ensure separation of concerns. Each microservice must have a single, defined purpose. If it starts feeling like they should add a responsibility, add a new microservice (and a new API) instead.</li>
+        <li>Production approval through testing. Write comprehensive testing parameters for each microservice, then combine them into a full testing suite for use in your continuous delivery pipeline.</li>
+        <li>Automate Deployment. And everything else. Automate code analysis, security scans, pass/fail testing, and every other possible process in your microservice environment.</li>
+      </ol>
+
+
+      <h3>Use containers</h3>
+
+      <div class="section__columns">
+        <div>
+          <p><a href="https://www.ibm.com/cloud/learn/containers">A container</a> is a standard unit of software that packages up code and all its dependencies.</p>
+          <p>Containers are small and lightweight, which makes them a good match for microservice architectures where applications are constructed of many, loosely coupled and independently deployable smaller services.</p>
+
+        </div>
+        <figure class="section__img">
+          <img src="./assets/container.svg" alt="monolitic app"></figure>
+      </div>
+      <figure class="section__illustration"><img src="./assets/containers.svg" alt="-">
+        <figcaption>Container architecture</figcaption>
+      </figure>
+      <p>Each of the applications is a separate container. Container engine allows you to deploy and configure all applications with one command, and without it, you had to deploy and configure each container separately.
+      </p>
+
+    </section>
+    <section class="section">
+      <h2 class="section__title">
+        <a name="Docker"></a>Docker</h2>
+      <p><a href="https://docs.docker.com/get-started/overview/">Docker</a> was launched in 2013 as an open source platform for developing, shipping, and running applications.</p>
+      <ul>
+        <li>Docker offers high flexibility in usage</li>
+        <li>Updates and upgrades on the deploy can be interchanged easily</li>
+        <li>The docker can be built locally, upgraded to be deployed to the cloud and can be run anywhere</li>
+        <li>Container replicas can be created and scaled easily and increased with efficiency</li>
+      </ul>
+      <figure class="section__img"> <img src="./assets/docker.svg" alt="docker architecture">
+        <figcaption>About Docker</figcaption>
+      </figure>
+
+    </section>
+    <img src="./assets/arrow.svg" alt="up" class="up hidden">
+  </main>
+
+  <footer class="footer">
+    <a href="https://github.com/Elina-nep">
+      <div class="git"></div> Elina-nep</a>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
