@@ -1,4 +1,8 @@
+import getDayInfo from "./Date.js";
+
 const upButton = document.querySelector('.up')
+const input = document.querySelector('.dateInput')
+const output = document.querySelector('.dateOutput')
 
 const goUp = () => {
   window.scrollTo(0, 0);
@@ -16,3 +20,4 @@ const toggleUp = () => {
 upButton.addEventListener('click', goUp)
 
 document.addEventListener('scroll', toggleUp)
+input.addEventListener('change', () => getDayInfo(input.value, output))

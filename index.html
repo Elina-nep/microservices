@@ -11,7 +11,9 @@
 
 <body class="body">
   <header class="header">
-    <div class="header__logo"><img src="./assets/docker-logo.svg" alt="docker-logo"></div>
+    <!-- <div class="header__logo"><img src="./assets/docker-logo.svg" alt="docker-logo"></div> -->
+    <input type="text" class="dateInput" autocomplete="off" value="Enter date" onfocus="if (this.value == 'Enter date') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter date';}">
+    <div class="dateOutput"></div>
   </header>
   <main class="wrapper">
     <h1 class="title">ABOUT MICROSERVICES AND DOCKER</h1>
@@ -179,7 +181,7 @@
       <div class="git"></div> Elina-nep</a>
   </footer>
 
-  <script src="./script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>

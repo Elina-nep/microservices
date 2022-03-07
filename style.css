@@ -51,8 +51,25 @@ a:hover {
 }
 
 .header {
-  width: 100%;
   padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--fs-3);
+}
+
+.dateInput {
+  min-height: var(--fs-3);
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--link-color);
+  background-color: var(--main-text-color);
+  background-clip: padding-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
 }
 
 .header__logo {
